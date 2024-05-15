@@ -53,7 +53,7 @@ const Bio = ({ searchUser, setSearchUser }) => {
       fetchDetails();
     }
 
-  }, [searchUser])
+  }, [searchUser,currentUser.email,currentUser.accessToken,setSearchUser])
 
   return (
     <div className="flex flex-col text-white mt-[30px] ml-[20px]">
