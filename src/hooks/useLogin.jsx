@@ -39,11 +39,11 @@ const useLogin = () => {
         })
     }
 
-    const loginWithGoogle = () => {
+    const loginWithGoogle = async() => {
         setIsLoading(true);
         setError(null);
         const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider).then(async (cred) => {
+        await signInWithPopup(auth, provider).then(async (cred) => {
             setError(null);
             setIsLoading(false);
             console.log(cred);
